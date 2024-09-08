@@ -2,9 +2,49 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditActivity">
+
+    <EditText
+        android:id="@+id/title_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="タイトル"
+        android:textSize="18sp"
+        android:backgroundTint="#800080"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"/>
+
+
+    <EditText
+        android:id="@+id/content_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="本文"
+        android:textSize="16sp"
+        android:inputType="textMultiLine"
+        android:minLines="5"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/check_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Check Button"
+        app:srcCompat="@drawable/check_images"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:scaleType="fitCenter"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
